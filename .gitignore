@@ -1,0 +1,4 @@
+__pycache__/
+leaf_estimation_dataset/
+venv/
+best_model.pth
