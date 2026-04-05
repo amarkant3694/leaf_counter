@@ -5,6 +5,8 @@ import timm
 import cv2
 import numpy as np
 from PIL import Image
+import gdown
+import os
 
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
@@ -75,11 +77,14 @@ class LeafModel(nn.Module):
 # ======================
 @st.cache_resource
 def load_model():
+    if not os.path.exists("best_model.pth"):
+        url = "PASTE_GOOGLE_DRIVE_LINK_HERE"
+        gdown.download(url, "best_model.pth", quiet=False)
+
     model = LeafModel().to(device)
     model.load_state_dict(torch.load("best_model.pth", map_location=device))
     model.eval()
     return model
-
 model = load_model()
 
 # ======================
