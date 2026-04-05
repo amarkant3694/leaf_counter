@@ -78,7 +78,7 @@ class LeafModel(nn.Module):
 @st.cache_resource
 def load_model():
     if not os.path.exists("best_model.pth"):
-        url = "PASTE_GOOGLE_DRIVE_LINK_HERE"
+        url = "https://drive.google.com/uc?id=1MmhGybTYfq1irG90TlDHRIoK1bfhadke"
         gdown.download(url, "best_model.pth", quiet=False)
 
     model = LeafModel().to(device)
