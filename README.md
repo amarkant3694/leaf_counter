@@ -69,7 +69,7 @@ streamlit run app.py
 
 ## 🌐 Live Demo
 
-👉 *(Add your deployed link here)*
+👉 https://leafcounter-forgrowingplants.streamlit.app/
 
 ---
 
